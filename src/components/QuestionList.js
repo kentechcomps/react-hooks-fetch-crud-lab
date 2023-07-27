@@ -1,12 +1,19 @@
 import React from "react";
+import QuestionItem from "./QuestionItem";
 
-function QuestionList() {
+
+function QuestionList({questionlist}) {
   return (
     <section>
       <h1>Quiz Questions</h1>
-      <ul>{/* display QuestionItem components here after fetching */}</ul>
+      <ul>{
+        <QuestionItem key={questionlist.id}
+         question = {questionlist}
+        />
+        }</ul>
     </section>
   );
 }
 
 export default QuestionList;
+
